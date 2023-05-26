@@ -21,8 +21,14 @@ public class UserLocator {
 
     public void printUsers () {
         for (int i = 0; i < this.size(); i++) {
-            User user = this.users.get(i);
-            System.out.println (user.getId() + " " + user.getName());
+            User user = this.get(i);
+            System.out.print (user.getId() + " ");
+            System.out.print (user.getName());
+            if (user instanceof Student | user instanceof Staff) {
+                System.out.println (" ‚³‚ñ");
+            } else {
+                System.out.println (" æ¶");
+            }
         }
     }
 }
