@@ -1,4 +1,4 @@
-public class Staff implements User{
+public class Staff implements Employee {
     private String id;
     private String name;
     private int postNumber = 0;
@@ -22,5 +22,9 @@ public class Staff implements User{
 
     public String getName () {
         return this.name;
+    }
+
+    public String getCompellation () {
+        return "В≥Вс";
     }
 }

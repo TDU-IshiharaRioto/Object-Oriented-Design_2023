@@ -1,4 +1,4 @@
-public class Teacher implements User {
+public class Teacher implements Employee {
     public String id;
     public String name;
     public int postNumber = 0;
@@ -23,4 +23,8 @@ public class Teacher implements User {
     public void setPostNumber (int postNumber) {
         this.postNumber = postNumber;
     }
+
+    public String getCompellation () {
+        return "æ¶";
+    } 
 }
