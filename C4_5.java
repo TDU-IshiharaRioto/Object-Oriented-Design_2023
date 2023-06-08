@@ -10,6 +10,9 @@ public class C4_5 {
     }
 
     public static void print(Iterator<Employee> itr) {
+        /*
+        String[] posts1 = {"•è", "ut", "•‹³ö", "‹³ö"};
+        String[] posts2 = {"‚È‚µ", "ŒW’·", "‰Û’·", "•”’·"};
         for (; itr.hasNext();) {
             Employee employee = itr.next();
             int postNumber = employee.getPostNumber();
@@ -28,6 +31,7 @@ public class C4_5 {
                         System.out.print ("‹³ö");
                         break;
                 }
+                System.out.print(posts1[postNumber]);
             } else {
                 switch (postNumber) {
                     case 0:
@@ -43,8 +47,14 @@ public class C4_5 {
                         System.out.print ("•”’·");
                         break;
                 }
+                System.out.print(posts2[postNumber]);
             }
             System.out.println(" " + employee.getId() + " " + employee.getName());
+        }
+        */
+        for (; itr.hasNext();) {
+            Employee employee = itr.next();
+            System.out.println(employee.getPost() + " " + employee.getId() + " " + employee.getName());
         }
     }
 }

@@ -1,13 +1,10 @@
-public class Teacher implements Employee {
-    public String id;
-    public String name;
-    public int postNumber = 0;
+public class Teacher extends AbstractEmployee {
 
     public Teacher (String id, String name) {
-        this.id = id;
-        this.name = name;
+        super(id, name);
     }
 
+    /*
     public String getId () {
         return this.id;
     }
@@ -23,8 +20,18 @@ public class Teacher implements Employee {
     public void setPostNumber (int postNumber) {
         this.postNumber = postNumber;
     }
+    */
 
     public String getCompellation () {
         return "æ¶";
-    } 
+    }
+
+    public String getPost () {
+        String[] posts = {"•è", "ut", "•‹³ö", "‹³ö"};
+        if (this.getPostNumber() < posts.length) {
+            return posts[this.getPostNumber()];
+        } else {
+            return "";
+        }
+    }
 }

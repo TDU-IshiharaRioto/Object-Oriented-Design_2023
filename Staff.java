@@ -1,13 +1,10 @@
-public class Staff implements Employee {
-    private String id;
-    private String name;
-    private int postNumber = 0;
+public class Staff extends AbstractEmployee {
 
     public Staff (String id, String name) {
-        this.id = id;
-        this.name = name;
+        super(id, name);
     }
 
+    /*
     public int getPostNumber () {
         return this.postNumber;
     }
@@ -23,8 +20,17 @@ public class Staff implements Employee {
     public String getName () {
         return this.name;
     }
-
+    */
     public String getCompellation () {
         return "‚³‚ñ";
+    }
+
+    public String getPost () {
+        String[] posts = {"‚È‚µ", "ŒW’·", "‰Û’·", "•”’·"};
+        if (this.getPostNumber() < posts.length) {
+            return posts[this.getPostNumber()];
+        } else {
+            return "";
+        }
     }
 }
