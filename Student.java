@@ -13,4 +13,8 @@ public class Student implements User {
     public String getName () {
         return this.name;
     }
+
+    public String getCompellation () {
+        return "äwê∂ÅF" + this.name;
+    }
 }
