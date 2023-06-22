@@ -26,4 +26,5 @@ public abstract class AbstractEmployee implements Employee{
 
     public abstract String getCompellation ();
     public abstract String getPost ();
+    public abstract void accept (Visitor visitor);
 }

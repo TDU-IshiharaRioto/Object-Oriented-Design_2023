@@ -33,4 +33,10 @@ public class Staff extends AbstractEmployee {
             return "";
         }
     }
+
+    public void accept (Visitor visitor) {
+        if (visitor instanceof UserVisitor) {
+            ((UserVisitor)visitor).visit(this);
+        }
+    }
 }

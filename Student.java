@@ -17,4 +17,10 @@ public class Student implements User {
     public String getCompellation () {
         return "äwê∂ÅF" + this.name;
     }
+
+    public void accept (Visitor visitor) {
+        if (visitor instanceof UserVisitor) {
+            ((UserVisitor)visitor).visit(this);
+        }
+    }
 }
