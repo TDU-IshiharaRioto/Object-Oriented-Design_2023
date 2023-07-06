@@ -1,0 +1,9 @@
+public class C6_3 {
+    public static void main(String[] args) {
+        UserLocator users = new UserLocator();
+        users.add(new Teacher("T999", "çÇã¥"));
+        users.add(new Student("06JK000", "óÈñÿ"));
+        users.add(new Staff("S00", "ã‡éq"));
+        users.printUsers(new PrintVisitor());
+    }
+}

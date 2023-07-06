@@ -31,4 +31,11 @@ public class UserLocator {
             }
         }
     }
+
+    public void printUsers (UserVisitor userVisitor) {
+        for (int i = 0; i < this.size(); i++) {
+            User user = this.get(i);
+            user.accept(userVisitor);
+        }
+    }
 }
